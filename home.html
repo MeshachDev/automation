@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SendMsg</title>
+    <style>
+    *{
+        background-color: rgb(42, 42, 41);
+    }
+        .hello{
+        text-align:center;
+         font-family:Arial, Helvetica, sans-serif;
+         font-size:45px;
+         color:white;
+        }
+        .hellop{
+        text-align:center;
+         font-family:Arial, Helvetica, sans-serif;
+         font-size:25px;
+         color:rgb(192, 43, 43);
+        
+        }
+        .sub{
+            font-size: 12px;
+            color:rgb(189, 138, 138);
+        }
+        .div{
+            height:100%;
+            position: relative;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        }
+        .input{
+            position: relative;
+            height:50px;
+            width:400px;
+            border-radius: 30px;
+            color:black;
+            background-color: aliceblue;
+            box-sizing: border-box;
+            padding-left: 20px;
+            padding-right: 20px;
+            outline: none;
+            font-size: 25px;
+           margin-left: 350px;
+            margin-top: 150px
+        }
+        .btn{
+           position: relative;
+           outline:none;
+           border:2px solid white;
+           border-radius: 30px;
+           color:rgb(14, 54, 6);
+           background-color: rgb(51, 255, 187);
+           height:50px;
+           width: 150px;
+           font-size: 25px;
+        }
+        .in{
+            top:80px;
+            left:-55px
+        }
+        .btna{
+           position: relative;
+           outline:none;
+           border:2px solid white;
+           border-radius: 30px;
+           color:rgb(14, 54, 6);
+           background-color: rgb(255, 51, 51);
+           height:50px;
+           width: 150px;
+           font-size: 25px;
+           margin:20px;
+           top:150px;
+           left:-450px
+        }
+        @media only screen and (max-width: 600px){
+            .btn{
+                left:180px;
+                margin-top: 10px;
+            }
+            .btna{
+                left:5px;
+                margin-top: 10px;
+            }
+            .input{
+                margin-top: 10px;
+                margin-left: 40px;
+            }
+            .in{
+                top:0px;
+                left:0px
+            }
+        }
+    </style>
+</head>
+<body>
+ <h1 class="hello">THUDHI ARANGAM</h1>
+
+ <p class="hellop"><sub class="sub">Powered by</sub> A.M.Productions</p>
+<div class="div">
+
+
+    <form method="post">
+
+        {% csrf_token %}
+        
+       <input class="input" type="text" name="link" placeholder="Enter Link"/>
+        <button class="btn" type="submit" onclick="aalert()">Submit</button>
+        <button class="btna" type="submit" onclick="aalert()">Play</button>
+    </form>
+</div>
+<script>
+    const aalert=()=>{
+        alert("Send?")
+    }
+</script>
+</body>
+</html>
